@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VPK Mart | Contact</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gray-50">
+  <!-- Navbar -->
+  <nav class="bg-white p-4 shadow flex flex-col md:flex-row justify-between items-center">
+    <a href="index.html" class="text-3xl font-bold text-green-700 mb-4 md:mb-0 flex items-center">
+      <i class="fas fa-shopping-basket mr-2"></i> VPK MART
+    </a>
+    <div class="flex flex-wrap justify-center gap-4 md:gap-6">
+      <a href="index.html" class="text-gray-700 hover:text-green-700 font-medium flex items-center">
+        <i class="fas fa-home mr-1"></i> Home
+      </a>
+      <a href="products.html" class="text-gray-700 hover:text-green-700 font-medium flex items-center">
+        <i class="fas fa-box mr-1"></i> Products
+      </a>
+      <a href="blog.html" class="text-gray-700 hover:text-green-700 font-medium flex items-center">
+        <i class="fas fa-blog mr-1"></i> Blog
+      </a>
+      <a href="contact.html" class="text-gray-700 hover:text-green-700 font-medium flex items-center">
+        <i class="fas fa-envelope mr-1"></i> Contact
+      </a>
+    </div>
+  </nav>
+  
+  <!-- Contact Header -->
+  <section class="bg-gradient-to-r from-green-600 to-green-800 text-white py-16">
+    <div class="container mx-auto px-4 text-center">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">Contact Us</h1>
+      <p class="text-xl max-w-2xl mx-auto">We'd love to hear from you! Reach out with any questions, feedback, or inquiries.</p>
+    </div>
+  </section>
+  
+  <!-- Contact Content -->
+  <section class="container mx-auto p-4 md:p-8">
+    <div class="flex flex-col md:flex-row gap-8">
+      <!-- Contact Form -->
+      <div class="w-full md:w-1/2">
+        <div class="bg-white rounded-lg p-6 shadow">
+          <h2 class="text-2xl font-bold text-green-800 mb-6">Send us a Message</h2>
+          <form onsubmit="sendEmail(event);" class="space-y-4">
+            <div>
+              <label class="block mb-2 font-semibold text-gray-700" for="name">Full Name</label>
+              <input class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500" type="text" id="name" required placeholder="Enter your name">
+            </div>
+            
+            <div>
+              <label class="block mb-2 font-semibold text-gray-700" for="email">Email Address</label>
+              <input class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500" type="email" id="email" required placeholder="Enter your email">
+            </div>
+            
+            <div>
+              <label class="block mb-2 font-semibold text-gray-700" for="subject">Subject</label>
+              <input class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500" type="text" id="subject" required placeholder="What is this regarding?">
+            </div>
+            
+            <div>
+              <label class="block mb-2 font-semibold text-gray-700" for="message">Message</label>
+              <textarea class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500" id="message" rows="5" required placeholder="How can we help you?"></textarea>
+            </div>
+            
+            <button type="submit" class="bg-green-700 text-white px-6 py-3 rounded-lg hover:bg-green-800 w-full font-medium transition duration-300 flex items-center justify-center">
+              <i class="fas fa-paper-plane mr-2"></i> Send Message
+            </button>
+          </form>
+        </div>
+      </div>
+      
+      <!-- Contact Information -->
+      <div class="w-full md:w-1/2">
+        <div class="bg-white rounded-lg p-6 shadow mb-8">
+          <h2 class="text-2xl font-bold text-green-800 mb-6">Contact Information</h2>
+          
+          <div class="space-y-6">
+            <div class="flex items-start">
+              <div class="bg-green-100 p-3 rounded-lg mr-4">
+                <i class="fas fa-map-marker-alt text-green-700 text-xl"></i>
+              </div>
+              <div>
+                <h3 class="font-bold text-lg text-gray-800 mb-1">Our Address</h3>
+                <p class="text-gray-600">123 Main Road, Chennai, Tamil Nadu, India - 600001</p>
+              </div>
+            </div>
+            
+            <div class="flex items-start">
+              <div class="bg-green-100 p-3 rounded-lg mr-4">
+                <i class="fas fa-phone-alt text-green-700 text-xl"></i>
+              </div>
+              <div>
+                <h3 class="font-bold text-lg text-gray-800 mb-1">Phone Number</h3>
+                <p class="text-gray-600">+91 98765 43210</p>
+                <p class="text-gray-600">+91 98765 43211 (WhatsApp)</p>
+              </div>
+            </div>
+            
+            <div class="flex items-start">
+              <div class="bg-green-100 p-3 rounded-lg mr-4">
+                <i class="fas fa-envelope text-green-700 text-xl"></i>
+              </div>
+              <div>
+                <h3 class="font-bold text-lg text-gray-800 mb-1">Email Address</h3>
+                <p class="text-gray-600">support@vpkmart.com</p>
+                <p class="text-gray-600">careers@vpkmart.com</p>
+              </div>
+            </div>
+            
+            <div class="flex items-start">
+              <div class="bg-green-100 p-3 rounded-lg mr-4">
+                <i class="fas fa-clock text-green-700 text-xl"></i>
+              </div>
+              <div>
+                <h3 class="font-bold text-lg text-gray-800 mb-1">Opening Hours</h3>
+                <p class="text-gray-600">Monday - Saturday: 8:00 AM - 9:00 PM</p>
+                <p class="text-gray-600">Sunday: 9:00 AM - 6:00 PM</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Map -->
+        <div class="bg-white rounded-lg p-6 shadow">
+          <h2 class="text-2xl font-bold text-green-800 mb-4">Find Us</h2>
+          <div class="bg-gray-200 border-2 border-dashed rounded-xl w-full h-64 flex items-center justify-center text-gray-500">
+            <img src="./assets/hero.jpg" alt="Store Interior" class="w-full h-full object-cover rounded-lg" onerror="this.src='./assets/blog1.jpg';">
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Customer Service Section -->
+    <div class="mt-12 bg-white rounded-lg p-6 shadow">
+      <h2 class="text-2xl font-bold text-green-800 mb-6 text-center">Our Customer Service</h2>
+      <div class="flex flex-col md:flex-row items-center gap-8">
+        <div class="w-full md:w-1/3">
+          <img src="./assets/healthy-eating.jpg" alt="Customer Service" class="w-full rounded-lg shadow" onerror="this.src='./assets/blog2.jpg';">
+        </div>
+        <div class="w-full md:w-2/3">
+          <p class="text-gray-600 mb-4">Our dedicated customer service team is available to assist you with any questions or concerns you may have. We're committed to providing you with the best shopping experience possible.</p>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="flex items-center">
+              <div class="bg-green-100 p-2 rounded-lg mr-3">
+                <i class="fas fa-headset text-green-700"></i>
+              </div>
+              <div>
+                <h3 class="font-bold text-gray-800">24/7 Support</h3>
+                <p class="text-gray-600 text-sm">Always here to help</p>
+              </div>
+            </div>
+            <div class="flex items-center">
+              <div class="bg-green-100 p-2 rounded-lg mr-3">
+                <i class="fas fa-truck text-green-700"></i>
+              </div>
+              <div>
+                <h3 class="font-bold text-gray-800">Fast Delivery</h3>
+                <p class="text-gray-600 text-sm">Quick and reliable</p>
+              </div>
+            </div>
+            <div class="flex items-center">
+              <div class="bg-green-100 p-2 rounded-lg mr-3">
+                <i class="fas fa-undo text-green-700"></i>
+              </div>
+              <div>
+                <h3 class="font-bold text-gray-800">Easy Returns</h3>
+                <p class="text-gray-600 text-sm">Hassle-free returns</p>
+              </div>
+            </div>
+            <div class="flex items-center">
+              <div class="bg-green-100 p-2 rounded-lg mr-3">
+                <i class="fas fa-shield-alt text-green-700"></i>
+              </div>
+              <div>
+                <h3 class="font-bold text-gray-800">Quality Guarantee</h3>
+                <p class="text-gray-600 text-sm">Freshness assured</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- FAQ Section -->
+    <div class="mt-12 bg-white rounded-lg p-6 shadow">
+      <h2 class="text-2xl font-bold text-green-800 mb-6 text-center">Frequently Asked Questions</h2>
+      <div class="space-y-4">
+        <div class="border-b border-gray-200 pb-4">
+          <button class="flex justify-between items-center w-full text-left font-semibold text-gray-800">
+            <span>How long does delivery take?</span>
+            <i class="fas fa-chevron-down text-green-700"></i>
+          </button>
+          <p class="mt-2 text-gray-600">Our standard delivery time is 2-4 hours for orders within the city. For express delivery, please contact us directly.</p>
+        </div>
+        <div class="border-b border-gray-200 pb-4">
+          <button class="flex justify-between items-center w-full text-left font-semibold text-gray-800">
+            <span>Do you offer same-day delivery?</span>
+            <i class="fas fa-chevron-down text-green-700"></i>
+          </button>
+          <p class="mt-2 text-gray-600">Yes, we offer same-day delivery for orders placed before 3 PM. A small delivery fee may apply.</p>
+        </div>
+        <div class="border-b border-gray-200 pb-4">
+          <button class="flex justify-between items-center w-full text-left font-semibold text-gray-800">
+            <span>What payment methods do you accept?</span>
+            <i class="fas fa-chevron-down text-green-700"></i>
+          </button>
+          <p class="mt-2 text-gray-600">We accept cash on delivery, credit/debit cards, UPI payments, and major digital wallets like Paytm and Google Pay.</p>
+        </div>
+        <div>
+          <button class="flex justify-between items-center w-full text-left font-semibold text-gray-800">
+            <span>Can I return or exchange products?</span>
+            <i class="fas fa-chevron-down text-green-700"></i>
+          </button>
+          <p class="mt-2 text-gray-600">Yes, we have a 24-hour return policy for perishable items and a 7-day policy for non-perishable items. Please contact us for more details.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <footer class="bg-green-800 text-white">
+    <div class="container mx-auto px-4 py-8">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div>
+          <h3 class="text-xl font-bold mb-4 flex items-center">
+            <i class="fas fa-shopping-basket mr-2"></i> VPK MART
+          </h3>
+          <p class="text-green-200">Your trusted local grocery store providing fresh produce and quality essentials since 2010.</p>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+          <ul class="space-y-2">
+            <li><a href="index.html" class="text-green-200 hover:text-white flex items-center"><i class="fas fa-chevron-right mr-2 text-xs"></i> Home</a></li>
+            <li><a href="products.html" class="text-green-200 hover:text-white flex items-center"><i class="fas fa-chevron-right mr-2 text-xs"></i> Products</a></li>
+            <li><a href="blog.html" class="text-green-200 hover:text-white flex items-center"><i class="fas fa-chevron-right mr-2 text-xs"></i> Blog</a></li>
+            <li><a href="contact.html" class="text-green-200 hover:text-white flex items-center"><i class="fas fa-chevron-right mr-2 text-xs"></i> Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold mb-4">Contact Info</h3>
+          <ul class="space-y-2 text-green-200">
+            <li class="flex items-start">
+              <i class="fas fa-map-marker-alt mt-1 mr-2"></i>
+              <span>123 Main Road, Chennai, Tamil Nadu</span>
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-phone mr-2"></i>
+              <span>98765 43210</span>
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-envelope mr-2"></i>
+              <span>support@vpkmart.com</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-green-700 mt-8 pt-6 text-center text-green-300">
+        <p>&copy; 2025 VPK Mart. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function sendEmail(event) {
+      event.preventDefault(); // Prevent the default form submission
+
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const subject = document.getElementById('subject').value;
+      const message = document.getElementById('message').value;
+
+      // Here you can send the data to your server or an email API.
+      alert(`Thank you, ${name}! Your message has been sent.\nWe'll get back to you soon at ${email}`);
+      
+      // Reset form
+      document.getElementById('name').value = '';
+      document.getElementById('email').value = '';
+      document.getElementById('subject').value = '';
+      document.getElementById('message').value = '';
+    }
+    
+    // Simple FAQ toggle functionality
+    document.querySelectorAll('button').forEach(button => {
+      button.addEventListener('click', function() {
+        const icon = this.querySelector('i');
+        if (icon.classList.contains('fa-chevron-down')) {
+          icon.classList.remove('fa-chevron-down');
+          icon.classList.add('fa-chevron-up');
+        } else {
+          icon.classList.remove('fa-chevron-up');
+          icon.classList.add('fa-chevron-down');
+        }
+      });
+    });
+  </script>
+</body>
+</html>

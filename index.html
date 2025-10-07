@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VPK Mart | Home</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gray-50">
+  <!-- Navbar -->
+  <nav class="bg-white p-4 shadow flex flex-col md:flex-row justify-between items-center">
+    <a href="index.html" class="text-3xl font-bold text-green-700 mb-4 md:mb-0 flex items-center">
+      <i class="fas fa-shopping-basket mr-2"></i> VPK MART
+    </a>
+    <div class="flex flex-wrap justify-center gap-4 md:gap-6">
+      <a href="index.html" class="text-gray-700 hover:text-green-700 font-medium flex items-center">
+        <i class="fas fa-home mr-1"></i> Home
+      </a>
+      <a href="products.html" class="text-gray-700 hover:text-green-700 font-medium flex items-center">
+        <i class="fas fa-box mr-1"></i> Products
+      </a>
+      <a href="blog.html" class="text-gray-700 hover:text-green-700 font-medium flex items-center">
+        <i class="fas fa-blog mr-1"></i> Blog
+      </a>
+      <a href="contact.html" class="text-gray-700 hover:text-green-700 font-medium flex items-center">
+        <i class="fas fa-envelope mr-1"></i> Contact
+      </a>
+    </div>
+  </nav>
+  
+  <!-- Hero -->
+  <section class="container mx-auto p-4 md:p-8 flex flex-col md:flex-row items-center">
+    <div class="w-full md:w-1/2 mb-8 md:mb-0 md:mr-10">
+      <img src="./assets/hero.jpg" alt="Supermarket" class="w-full rounded-lg shadow-lg">
+    </div>
+    <div class="w-full md:w-1/2">
+      <h1 class="text-4xl md:text-5xl font-extrabold text-green-800 mb-4">Welcome to VPK Mart!</h1>
+      <p class="text-gray-700 mb-6 text-lg">
+        Your one-stop shop for fresh groceries, essentials, and great deals. Shop easy, shop smart, shop local!
+      </p>
+      <div class="bg-green-100 border-l-4 border-green-500 text-green-800 p-4 mb-6 rounded">
+        <p class="font-semibold text-lg mb-2"><i class="fas fa-bullseye mr-2"></i> Our Mission</p>
+        <p>
+          To make grocery shopping simple, efficient, and eco-friendly while supporting local farmers and delivering unbeatable value to our customers.
+        </p>
+      </div>
+      <div class="flex flex-col sm:flex-row gap-4">
+        <a href="products.html" class="bg-green-700 text-white px-6 py-3 rounded-lg shadow hover:bg-green-800 text-center font-medium transition duration-300 flex items-center justify-center">
+          <i class="fas fa-shopping-cart mr-2"></i> Start Shopping
+        </a>
+        <a href="blog.html" class="bg-white text-green-700 border-2 border-green-700 px-6 py-3 rounded-lg shadow hover:bg-green-50 text-center font-medium transition duration-300 flex items-center justify-center">
+          <i class="fas fa-book-reader mr-2"></i> Read Our Blog
+        </a>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Features -->
+  <div class="container mx-auto px-4 py-10">
+    <h2 class="text-3xl font-bold text-center text-green-800 mb-12">Why Choose VPK Mart?</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition duration-300 border-t-4 border-green-500">
+        <div class="text-green-600 text-4xl mb-4">
+          <i class="fas fa-apple-alt"></i>
+        </div>
+        <h2 class="font-bold text-xl text-green-700 mb-3">Fresh Produce</h2>
+        <p class="text-gray-600">Premium quality fruits & veggies at unbeatable prices, sourced directly from local farms.</p>
+      </div>
+      <div class="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition duration-300 border-t-4 border-green-500">
+        <div class="text-green-600 text-4xl mb-4">
+          <i class="fas fa-shopping-basket"></i>
+        </div>
+        <h2 class="font-bold text-xl text-green-700 mb-3">Daily Essentials</h2>
+        <p class="text-gray-600">From dairy to grains, we stock all your basic needs with quality assurance.</p>
+      </div>
+      <div class="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition duration-300 border-t-4 border-green-500">
+        <div class="text-green-600 text-4xl mb-4">
+          <i class="fas fa-shipping-fast"></i>
+        </div>
+        <h2 class="font-bold text-xl text-green-700 mb-3">Contactless Delivery</h2>
+        <p class="text-gray-600">Order online & get your groceries delivered safely to your door with fast delivery.</p>
+      </div>
+    </div>
+  </div>
+  
+  <!-- New Products Showcase -->
+  <div class="bg-green-50 py-12">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center text-green-800 mb-12">Featured Products</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="bg-white rounded-lg shadow text-center p-4">
+          <img src="./assets/banana.jpg" alt="Bananas" class="w-full h-40 object-cover rounded-lg mb-3" onerror="this.src='./assets/hero.jpg';">
+          <h3 class="font-bold text-green-700">Fresh Bananas</h3>
+          <p class="text-gray-600 text-sm">₹40/dozen</p>
+        </div>
+        <div class="bg-white rounded-lg shadow text-center p-4">
+          <img src="./assets/carrot.jpg" alt="Carrots" class="w-full h-40 object-cover rounded-lg mb-3" onerror="this.src='./assets/blog1.jpg';">
+          <h3 class="font-bold text-green-700">Fresh Carrots</h3>
+          <p class="text-gray-600 text-sm">₹30/kg</p>
+        </div>
+        <div class="bg-white rounded-lg shadow text-center p-4">
+          <img src="./assets/broccoli.jpg" alt="Broccoli" class="w-full h-40 object-cover rounded-lg mb-3" onerror="this.src='./assets/blog2.jpg';">
+          <h3 class="font-bold text-green-700">Organic Broccoli</h3>
+          <p class="text-gray-600 text-sm">₹35/bunch</p>
+        </div>
+        <div class="bg-white rounded-lg shadow text-center p-4">
+          <img src="./assets/eggs.jpg" alt="Eggs" class="w-full h-40 object-cover rounded-lg mb-3" onerror="this.src='./assets/hero.jpg';">
+          <h3 class="font-bold text-green-700">Farm Fresh Eggs</h3>
+          <p class="text-gray-600 text-sm">₹80/dozen</p>
+        </div>
+      </div>
+      <div class="text-center mt-8">
+        <a href="products.html" class="bg-green-700 text-white px-6 py-3 rounded-lg shadow hover:bg-green-800 inline-flex items-center">
+          <i class="fas fa-box mr-2"></i> View All Products
+        </a>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Team Section -->
+  <div class="py-12">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center text-green-800 mb-12">Meet Our Team</h2>
+      <div class="flex justify-center">
+        <div class="bg-white rounded-lg shadow p-4 max-w-md">
+          <img src="./assets/team.jpg" alt="Our Team" class="w-full h-64 object-cover rounded-lg mb-4" onerror="this.src='./assets/hero.jpg';">
+          <h3 class="font-bold text-xl text-green-700 text-center">Dedicated Professionals</h3>
+          <p class="text-gray-600 text-center">Our team is committed to providing you with the freshest produce and best service.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Testimonials -->
+  <div class="bg-green-50 py-12">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center text-green-800 mb-12">What Our Customers Say</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="bg-white p-6 rounded-lg shadow">
+          <div class="text-yellow-400 mb-2">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <p class="text-gray-600 italic mb-4">"The freshness of their produce is unmatched. I've been shopping here for over a year and never been disappointed!"</p>
+          <p class="font-bold text-green-700">- Priya S.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow">
+          <div class="text-yellow-400 mb-2">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+          </div>
+          <p class="text-gray-600 italic mb-4">"Fast delivery and excellent customer service. Their contactless delivery option is a lifesaver!"</p>
+          <p class="font-bold text-green-700">- Raj K.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow">
+          <div class="text-yellow-400 mb-2">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <p class="text-gray-600 italic mb-4">"Supporting local farmers while getting quality products at fair prices. What more could you ask for?"</p>
+          <p class="font-bold text-green-700">- Anjali M.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Footer -->
+  <footer class="bg-green-800 text-white">
+    <div class="container mx-auto px-4 py-8">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div>
+          <h3 class="text-xl font-bold mb-4 flex items-center">
+            <i class="fas fa-shopping-basket mr-2"></i> VPK MART
+          </h3>
+          <p class="text-green-200">Your trusted local grocery store providing fresh produce and quality essentials since 2010.</p>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+          <ul class="space-y-2">
+            <li><a href="index.html" class="text-green-200 hover:text-white flex items-center"><i class="fas fa-chevron-right mr-2 text-xs"></i> Home</a></li>
+            <li><a href="products.html" class="text-green-200 hover:text-white flex items-center"><i class="fas fa-chevron-right mr-2 text-xs"></i> Products</a></li>
+            <li><a href="blog.html" class="text-green-200 hover:text-white flex items-center"><i class="fas fa-chevron-right mr-2 text-xs"></i> Blog</a></li>
+            <li><a href="contact.html" class="text-green-200 hover:text-white flex items-center"><i class="fas fa-chevron-right mr-2 text-xs"></i> Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold mb-4">Contact Info</h3>
+          <ul class="space-y-2 text-green-200">
+            <li class="flex items-start">
+              <i class="fas fa-map-marker-alt mt-1 mr-2"></i>
+              <span>123 Main Road, Chennai, Tamil Nadu</span>
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-phone mr-2"></i>
+              <span>98765 43210</span>
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-envelope mr-2"></i>
+              <span>support@vpkmart.com</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-green-700 mt-8 pt-6 text-center text-green-300">
+        <p>&copy; 2025 VPK Mart. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

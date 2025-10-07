@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VPK Mart | Products</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gray-50">
+  <!-- Navbar -->
+  <nav class="bg-white p-4 shadow flex flex-col md:flex-row justify-between items-center">
+    <a href="index.html" class="text-3xl font-bold text-green-700 mb-4 md:mb-0 flex items-center">
+      <i class="fas fa-shopping-basket mr-2"></i> VPK MART
+    </a>
+    <div class="flex flex-wrap justify-center gap-4 md:gap-6">
+      <a href="index.html" class="text-gray-700 hover:text-green-700 font-medium flex items-center">
+        <i class="fas fa-home mr-1"></i> Home
+      </a>
+      <a href="products.html" class="text-gray-700 hover:text-green-700 font-medium flex items-center">
+        <i class="fas fa-box mr-1"></i> Products
+      </a>
+      <a href="blog.html" class="text-gray-700 hover:text-green-700 font-medium flex items-center">
+        <i class="fas fa-blog mr-1"></i> Blog
+      </a>
+      <a href="contact.html" class="text-gray-700 hover:text-green-700 font-medium flex items-center">
+        <i class="fas fa-envelope mr-1"></i> Contact
+      </a>
+    </div>
+  </nav>
+  
+  <!-- Product List -->
+  <section class="container mx-auto p-4 md:p-8">
+    <div class="text-center mb-10">
+      <h1 class="text-3xl md:text-4xl font-bold text-green-800 mb-4">Our Premium Products</h1>
+      <p class="text-gray-600 max-w-2xl mx-auto">Discover our carefully selected range of fresh produce and quality essentials. All products are sourced directly from local farmers and trusted suppliers.</p>
+    </div>
+    
+    <div class="flex flex-col md:flex-row justify-between mb-8 gap-4">
+      <div class="w-full md:w-1/3">
+        <div class="relative">
+          <input type="text" placeholder="Search products..." class="w-full p-3 border rounded-lg pl-10">
+          <i class="fas fa-search absolute left-3 top-4 text-gray-400"></i>
+        </div>
+      </div>
+      <div class="w-full md:w-1/3">
+        <select class="w-full p-3 border rounded-lg">
+          <option>All Categories</option>
+          <option>Fruits & Vegetables</option>
+          <option>Dairy Products</option>
+          <option>Grains & Staples</option>
+          <option>Bakery</option>
+        </select>
+      </div>
+      <div class="w-full md:w-1/3">
+        <select class="w-full p-3 border rounded-lg">
+          <option>Sort by: Featured</option>
+          <option>Price: Low to High</option>
+          <option>Price: High to Low</option>
+          <option>Customer Rating</option>
+        </select>
+      </div>
+    </div>
+    
+    <div id="product-list" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+  </section>
+  
+  <script>
+    // Dummy product data with reviews, quality, and ratings
+    const products = [
+      {
+        name: "Fresh Apples",
+        price: "₹120/kg",
+        img: "./assets/apple.jpg",
+        desc: "Crisp, sweet apples directly from local farms.",
+        quality: "Premium Grade",
+        rating: 4.8,
+        reviews: [
+          { user:"Anjali", text:"Very fresh and juicy!", stars:5 },
+          { user:"Raj", text:"Best apples in town!", stars:5 }
+        ]
+      },
+      {
+        name: "Organic Milk",
+        price: "₹60/litre",
+        img: "./assets/milk.jpg",
+        desc: "Pure, organic milk from trusted dairies.",
+        quality: "A+ Organic",
+        rating: 4.6,
+        reviews: [
+          { user:"Siva", text:"Creamy and pure. Tastes natural.", stars:5 },
+          { user:"Priya", text:"No adulteration, very good!", stars:4 }
+        ]
+      },
+      {
+        name: "Basmati Rice",
+        price: "₹90/kg",
+        img: "./assets/rice.jpg",
+        desc: "Premium long grain basmati rice.",
+        quality: "Extra Long Grain",
+        rating: 4.7,
+        reviews: [
+          { user:"Karthik", text:"Rice cooks perfectly every time.", stars:5 }
+        ]
+      },
+      {
+        name: "Brown Bread",
+        price: "₹40/pack",
+        img: "./assets/bread.jpg",
+        desc: "Freshly baked brown bread, high in fiber.",
+        quality: "High Fiber",
+        rating: 4.9,
+        reviews: [
+          { user:"Deepa", text:"Soft and healthy. Family favorite!", stars:5 }
+        ]
+      },
+      {
+        name: "Tomatoes",
+        price: "₹25/kg",
+        img: "./assets/tomato.jpg",
+        desc: "Juicy and ripe tomatoes, perfect for salads.",
+        quality: "Farm Fresh",
+        rating: 4.5,
+        reviews: [
+          { user:"Amit", text:"Very tasty, perfectly ripe.", stars:4 }
+        ]
+      },
+      {
+        name: "Sugar",
+        price: "₹45/kg",
+        img: "./assets/sugar.jpg",
+        desc: "Fine quality granulated sugar.",
+        quality: "Refined",
+        rating: 4.3,
+        reviews: [
+          { user:"Nisha", text:"Very fine, dissolves fast.", stars:4 }
+        ]
+      },
+      {
+        name: "Fresh Bananas",
+        price: "₹40/dozen",
+        img: "./assets/banana.jpg",
+        desc: "Sweet and ripe bananas, rich in potassium.",
+        quality: "Premium Grade",
+        rating: 4.7,
+        reviews: [
+          { user:"Ravi", text:"Perfectly ripe and delicious!", stars:5 }
+        ]
+      },
+      {
+        name: "Fresh Carrots",
+        price: "₹30/kg",
+        img: "./assets/carrot.jpg",
+        desc: "Crunchy and sweet carrots, great for salads.",
+        quality: "Farm Fresh",
+        rating: 4.6,
+        reviews: [
+          { user:"Meena", text:"Very fresh and crunchy!", stars:4 }
+        ]
+      },
+      {
+        name: "Farm Fresh Eggs",
+        price: "₹80/dozen",
+        img: "./assets/eggs.jpg",
+        desc: "Free-range eggs from local farms, high in protein.",
+        quality: "Farm Fresh",
+        rating: 4.8,
+        reviews: [
+          { user:"Suresh", text:"Best eggs I've ever had!", stars:5 }
+        ]
+      },
+      {
+        name: "Organic Broccoli",
+        price: "₹35/bunch",
+        img: "./assets/broccoli.jpg",
+        desc: "Fresh organic broccoli, packed with nutrients.",
+        quality: "Organic",
+        rating: 4.4,
+        reviews: [
+          { user:"Kavitha", text:"Very fresh and green!", stars:4 }
+        ]
+      }
+    ];
+
+    function getStars(r) {
+      let stars = '';
+      const fullStars = Math.floor(r);
+      const halfStar = r % 1 >= 0.5;
+      
+      for (let i = 0; i < fullStars; i++) {
+        stars += '<i class="fas fa-star text-yellow-400"></i>';
+      }
+      
+      if (halfStar) {
+        stars += '<i class="fas fa-star-half-alt text-yellow-400"></i>';
+      }
+      
+      const emptyStars = 5 - fullStars - (halfStar ? 1 : 0);
+      for (let i = 0; i < emptyStars; i++) {
+        stars += '<i class="far fa-star text-yellow-400"></i>';
+      }
+      
+      return stars;
+    }
+
+    const list = document.getElementById('product-list');
+    products.forEach(prod => {
+      list.innerHTML += `
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition duration-300">
+          <div class="relative">
+            <img src="${prod.img}" alt="${prod.name}" class="w-full h-56 object-cover" onerror="this.src='./assets/hero.jpg';">
+            <div class="absolute top-4 right-4 bg-green-600 text-white px-3 py-1 rounded-full text-sm font-bold">
+              ${prod.quality}
+            </div>
+          </div>
+          <div class="p-6">
+            <div class="flex justify-between items-start mb-2">
+              <h2 class="text-xl font-bold text-green-700">${prod.name}</h2>
+              <div class="text-lg font-bold text-green-800">${prod.price}</div>
+            </div>
+            <p class="text-gray-600 mb-4">${prod.desc}</p>
+            <div class="mb-4 flex items-center">
+              <div class="mr-2">
+                ${getStars(prod.rating)}
+              </div>
+              <span class="text-gray-500 text-sm">(${prod.rating})</span>
+            </div>
+            <div class="mb-4">
+              <div class="flex items-center text-sm text-gray-500 mb-1">
+                <i class="fas fa-comment mr-1"></i> Top Review
+              </div>
+              <div class="bg-gray-100 p-3 rounded-lg">
+                <p class="text-gray-700 italic text-sm">"${prod.reviews[0].text}"</p>
+                <p class="text-gray-500 text-xs mt-1">- ${prod.reviews[0].user}</p>
+              </div>
+            </div>
+            <button class="bg-green-700 text-white px-4 py-2 rounded-lg hover:bg-green-800 w-full flex items-center justify-center transition duration-300">
+              <i class="fas fa-cart-plus mr-2"></i> Add to Cart
+            </button>
+          </div>
+        </div>
+      `;
+    });
+  </script>
+  
+  <!-- Special Offer Banner -->
+  <div class="bg-gradient-to-r from-green-600 to-green-800 text-white py-10 mt-10">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold mb-4">Special Weekend Offer!</h2>
+      <p class="text-xl mb-6 max-w-2xl mx-auto">Get 15% off on all orders above ₹500. Use code: WEEKEND15</p>
+      <div class="flex justify-center items-center">
+        <div class="bg-white text-green-800 rounded-lg px-4 py-2 font-bold mr-4">
+          <span>Offer ends in:</span>
+        </div>
+        <div class="flex space-x-2">
+          <div class="bg-white text-green-800 rounded-lg px-3 py-2 font-bold">
+            <span>02</span>
+            <div class="text-xs">Days</div>
+          </div>
+          <div class="bg-white text-green-800 rounded-lg px-3 py-2 font-bold">
+            <span>14</span>
+            <div class="text-xs">Hours</div>
+          </div>
+          <div class="bg-white text-green-800 rounded-lg px-3 py-2 font-bold">
+            <span>36</span>
+            <div class="text-xs">Mins</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Footer -->
+  <footer class="bg-green-800 text-white">
+    <div class="container mx-auto px-4 py-8">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div>
+          <h3 class="text-xl font-bold mb-4 flex items-center">
+            <i class="fas fa-shopping-basket mr-2"></i> VPK MART
+          </h3>
+          <p class="text-green-200">Your trusted local grocery store providing fresh produce and quality essentials since 2010.</p>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+          <ul class="space-y-2">
+            <li><a href="index.html" class="text-green-200 hover:text-white flex items-center"><i class="fas fa-chevron-right mr-2 text-xs"></i> Home</a></li>
+            <li><a href="products.html" class="text-green-200 hover:text-white flex items-center"><i class="fas fa-chevron-right mr-2 text-xs"></i> Products</a></li>
+            <li><a href="blog.html" class="text-green-200 hover:text-white flex items-center"><i class="fas fa-chevron-right mr-2 text-xs"></i> Blog</a></li>
+            <li><a href="contact.html" class="text-green-200 hover:text-white flex items-center"><i class="fas fa-chevron-right mr-2 text-xs"></i> Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold mb-4">Contact Info</h3>
+          <ul class="space-y-2 text-green-200">
+            <li class="flex items-start">
+              <i class="fas fa-map-marker-alt mt-1 mr-2"></i>
+              <span>123 Main Road, Chennai, Tamil Nadu</span>
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-phone mr-2"></i>
+              <span>98765 43210</span>
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-envelope mr-2"></i>
+              <span>support@vpkmart.com</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-green-700 mt-8 pt-6 text-center text-green-300">
+        <p>&copy; 2025 VPK Mart. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

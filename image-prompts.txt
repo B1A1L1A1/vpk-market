@@ -1,0 +1,44 @@
+# VPK Mart - Image Prompts (20 Total)
+
+## Product Images (10 images)
+
+1. `apple.jpg` - Fresh red apples on a white background, high quality, studio lighting
+2. `banana.jpg` - Fresh yellow bananas in a bunch, high quality, studio lighting
+3. `grapes.jpg` - Purple grapes in clusters, fresh and clean, professional food photography
+4. `strawberry.jpg` - Red fresh strawberries in a bowl, vibrant colors
+5. `watermelon.jpg` - Fresh watermelon slices on a plate, summer vibe
+6. `onion.jpg` - Fresh onions in a basket, layered
+7. `potato.jpg` - Fresh potatoes in a mesh bag
+8. `carrot.jpg` - Fresh orange carrots with green tops
+9. `broccoli.jpg` - Fresh green broccoli heads
+10. `eggs.jpg` - Fresh eggs in a carton
+
+## Blog & Website Enhancement Images (7 images)
+
+11. `hero.jpg` - Main hero image for the homepage, supermarket interior with fresh produce
+12. `blog1.jpg` - Image for blog posts, person selecting fresh fruits
+13. `blog2.jpg` - Image for blog posts, fresh vegetables display
+14. `farm-fresh.jpg` - Farmer holding fresh vegetables in a field
+15. `cooking.jpg` - Person cooking with fresh ingredients in a kitchen
+16. `organic-farming.jpg` - Organic farm with fresh produce growing
+17. `healthy-eating.jpg` - Person eating fresh salad, healthy lifestyle concept
+
+## Team & Service Images (2 images)
+
+18. `team.jpg` - Diverse group of 4-5 friendly supermarket staff members in green uniforms
+19. `bread.jpg` - Fresh bread products in a bakery section
+20. `rice.jpg` - Various rice products displayed in packages
+
+These 20 images are currently used in the VPK Mart website:
+1. All product images for the online store
+2. Blog post featured images
+3. Homepage hero image
+4. Team photos and service images
+5. Essential website enhancement visuals
+
+Each image includes:
+- A filename that matches what's used in the HTML files
+- A detailed description of the image content
+- Specific visual elements to ensure consistency with your brand
+
+Note: The website is designed to gracefully handle missing images by falling back to default images like hero.jpg and blog1.jpg.
